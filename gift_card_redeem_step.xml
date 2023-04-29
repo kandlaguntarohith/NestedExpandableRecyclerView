@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/step_divider_top"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="#F3EDFA"
+            app:layout_constraintTop_toTopOf="@+id/step_text"
+            app:layout_constraintEnd_toEndOf="@+id/step_count"
+            app:layout_constraintStart_toStartOf="@+id/step_count"
+            app:layout_constraintBottom_toTopOf="@id/step_count" />
+
+        <TextView
+            android:height="25dp"
+            android:width="25dp"
+            android:id="@+id/step_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/steps_background_circle"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="1"
+            android:textStyle="bold"
+            android:textColor="#5F259F"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/step_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/step_text" />
+
+        <View
+            android:id="@+id/step_divider_bottom"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="#F3EDFA"
+            app:layout_constraintBottom_toBottomOf="@+id/step_text"
+            app:layout_constraintEnd_toEndOf="@+id/step_count"
+            app:layout_constraintStart_toStartOf="@+id/step_count"
+            app:layout_constraintTop_toBottomOf="@id/step_count" />
+
+        <TextView
+            android:id="@+id/step_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            android:paddingVertical="12dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/step_count"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod eiusmodeiusmod  " />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
